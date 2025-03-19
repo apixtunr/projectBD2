@@ -1,0 +1,24 @@
+
+PARA ACCEDER AL CONTENEDOR DE LA BASE DE DATOS: docker exec -it contenedor-bd mysql -u root -p
+
+USE project_db;
+
+SELECCIONAR LA TABLA: USE project_db;
+
+describe usuarios ----- PARA VER CAMPOS DE LA TABLA USUARIOS
+
+
+INSERT INTO  (columna1, columna2) VALUES ('valor1', 'valor2');
+
+PARA INSERTAR TIPOS DE USUARIOS:
+
+
+INSERT INTO tipo_usuario (id_tipo_usuario, rol) VALUES (1, 'Profesor');
+INSERT INTO tipo_usuario (id_tipo_usuario, rol) VALUES (2, 'Estudiante');
+INSERT INTO tipo_usuario (id_tipo_usuario, rol) VALUES (3, 'Administrador');
+
+PARA INSERTAR UN USUARIO ADMINISTRADOR:
+
+INSERT INTO Usuarios (id_usuario, nombre, apellido, identificacion, correo, telefono, id_tipo_usuario) VALUES (2, 'Alvaro', 'Pix', '1716523689458', 'admin', '23456789', 3);
+
+SELECT * FROM tipo_usuario; para ver el contenido de la tabla.
