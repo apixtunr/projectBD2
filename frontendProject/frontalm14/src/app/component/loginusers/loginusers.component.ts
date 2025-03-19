@@ -16,10 +16,10 @@ export class LoginusersComponent {
   login() {
     let validarFormulario: any = document.getElementById("loginForm");
     if (validarFormulario.reportValidity()) {
-      console.log(this.userData); // Verifica los datos que se están enviando
+      console.log(this.userData); o
       this.userDataService.login(this.userData).subscribe(
         (u: any) => {
-          console.log(u); // Verifica la respuesta del backend
+          console.log(u);
           this.darBienvenida(u);
         },
         (error) => {
@@ -36,8 +36,8 @@ export class LoginusersComponent {
       this.userData = {};
 
       if (userData.role === 'user') {
-        alert("Welcome " + userData.userName);  // Mostrar el mensaje de bienvenida antes de navegar
-        this.router.navigate(['/userdata']);    // Redirigir después del mensaje
+        alert("this is a beta angular change " + userData.userName);
+        this.router.navigate(['/userdata']);
       }
     } else {
       alert("Invalid credentials");
