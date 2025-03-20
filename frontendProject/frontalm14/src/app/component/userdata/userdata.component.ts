@@ -20,7 +20,7 @@ export class UserdataComponent implements OnInit {
   getUserData() {
     this.userDataService.listUserData().subscribe(
       (data: any) => {
-        console.log("Datos recibidos:", data); // Imprime los datos en la consola
+        console.log("Datos recibidos:", data); // log para imprimir datos en la consola
 
         if (data && data.length > 0) {
           this.userData = data[0]; // Si el servicio devuelve un array, tomamos el primer usuario
