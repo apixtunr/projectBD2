@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../../service/userdata.service';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-userdata',
   templateUrl: './userdata.component.html',
-  styleUrl: './userdata.component.css'
+  styleUrl: './userdata.component.css',
+  providers: [DatePipe]
 })
 
 export class UserdataComponent implements OnInit {
   userData: any = {};
 
-  constructor(private userDataService: UserDataService, private router: Router) {}
+  constructor(private userDataService: UserDataService, private router: Router, private datePipe: DatePipe) {}
 
   ngOnInit() {
     this.getUserData();

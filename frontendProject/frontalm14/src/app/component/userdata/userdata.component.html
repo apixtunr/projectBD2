@@ -4,8 +4,12 @@
   <div *ngIf="userData && userData.idUser">
     <p><strong>ID:</strong> {{ userData.idUser }}</p>
     <p><strong>Nombre:</strong> {{ userData.userName }}</p>
+    <p><strong>Rol:</strong> {{ userData.role }}</p>
+    <p><strong>Privilegios:</strong> {{ userData.privileges }}</p>
     <p><strong>Estado:</strong> {{ userData.status }}</p>
     <p><strong>Schema:</strong> {{ userData.userSchema }}</p>
+    <p><strong>Fecha de Creación:</strong> {{ userData.createdAt | date:'dd/MM/yyyy - HH:mm' }}</p>
+
   </div>
 
   <div *ngIf="!userData || !userData.idUser">
