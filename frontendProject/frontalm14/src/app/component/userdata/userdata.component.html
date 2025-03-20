@@ -1,1 +1,16 @@
-<p>userdata works!</p>
+<div class="container">
+  <h2>Información del Usuario</h2>
+
+  <div *ngIf="userData && userData.idUser">
+    <p><strong>ID:</strong> {{ userData.idUser }}</p>
+    <p><strong>Nombre:</strong> {{ userData.userName }}</p>
+    <p><strong>Estado:</strong> {{ userData.status }}</p>
+    <p><strong>Schema:</strong> {{ userData.userSchema }}</p>
+  </div>
+
+  <div *ngIf="!userData || !userData.idUser">
+    <p>No hay datos de usuario disponibles.</p>
+  </div>
+
+  <button (click)="getUserData()">Actualizar Datos</button>
+</div>

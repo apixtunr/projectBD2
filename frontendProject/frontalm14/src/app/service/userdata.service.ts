@@ -11,7 +11,7 @@ export class UserDataService {
   Url='http://localhost:9090';
 
   listUserData(){
-    return this.http.get<UserData[]>(this.Url+"/api/api/list_userData");
+    return this.http.get<UserData[]>(this.Url+"/api/list_userData");
   }
 
   addUserData(userData:UserData)

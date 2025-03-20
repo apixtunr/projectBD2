@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
-import { UserDataService } from '../../service/userdata.service';
 import { Component } from '@angular/core';
+import { UserDataService } from '../../service/userdata.service';
 
 @Component({
   selector: 'app-loginusers',
@@ -16,14 +16,14 @@ export class LoginusersComponent {
   login() {
     let validarFormulario: any = document.getElementById("loginForm");
     if (validarFormulario.reportValidity()) {
-      console.log(this.userData); o
+      console.log(this.userData);
       this.userDataService.login(this.userData).subscribe(
         (u: any) => {
           console.log(u);
           this.darBienvenida(u);
         },
-        (error) => {
-          console.error("Error en la solicitud", error);
+        (error:Error) => {
+          console.error(error.message);
         }
       );
     }
