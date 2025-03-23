@@ -36,7 +36,8 @@ export class LoginusersComponent {
       this.userData = {};
 
       if (userData.role === 'user') {
-        alert("this is a beta angular change " + userData.userName);
+        console.log("Usuario: "  + this.userData.userName);
+        console.log("Esquema: "  + this.userData.userSchema);
         this.router.navigate(['/userdata']);
       }
     } else {

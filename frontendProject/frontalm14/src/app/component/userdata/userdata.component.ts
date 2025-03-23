@@ -29,7 +29,8 @@ export class UserdataComponent implements OnInit {
           localStorage.setItem("userData", JSON.stringify(this.userData));
 
           if (this.userData.userSchema) {
-            alert("Sus schemas son: " + this.userData.userSchema);
+            console.log("Usuario: "  + this.userData.userName);
+            console.log("Esquema: "  + this.userData.userSchema);
           } else {
             alert("No se encontró userSchema en la respuesta.");
           }
