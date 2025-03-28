@@ -35,7 +35,7 @@ export class LoginusersComponent {
       localStorage.setItem("userData", t);
       this.userData = {};
 
-      if (userData.role === 'user') {
+      if (userData.role === 'sys') {
         console.log("Usuario: "  + this.userData.userName);
         console.log("Esquema: "  + this.userData.userSchema);
         this.router.navigate(['/userdata']);
